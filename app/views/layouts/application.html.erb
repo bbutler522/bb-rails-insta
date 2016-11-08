@@ -10,7 +10,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div class="container-fluid nav-container">
+  <div class="nav-container">
     <nav class="navbar navbar-default">
       <div class="navbar-container">
         <div class="navbar-header">
@@ -40,13 +40,13 @@
     </nav>
   </div>
 
-  <div class="container">
+<div class="container">
+  <% flash.each do |name, msg| %>
+    <%= content_tag :div, msg, class: [:alert, alert_for(name)] %>
+  <% end %>
+  <%= yield %>
+</div>
 
-    <% if notice %>
-      <div class="alert alert-success"><%= notice %></div>
-    <% end %>
-
-    <%= yield %>
 
     <div class="footer">
       <p>A Ruby on Rails example by <a href="http://brennanbutler.com/" target="blank">Brennan Butler</a>. | Source at <a href="https://github.com/bbutler522/bb-rails-listings" target="blank">github.com/bbutler522/bb-rails-listings</a></p>
