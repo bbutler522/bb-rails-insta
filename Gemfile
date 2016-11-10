@@ -35,6 +35,7 @@ gem 'devise'
 
 gem 'paperclip', '~> 4.2'
 gem 'simple_form'
+gem 'kaminari', :git => 'https://github.com/amatsuda/kaminari.git'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
