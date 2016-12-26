@@ -1,3 +1,7 @@
+html {  
+  height: 100%;
+}
+
 body {
   background-color: #fafafa;
   font-family: proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
@@ -168,10 +172,8 @@ body {
   border-radius: 8px;
 }
 
-.panel-heading{
-  h1 {
-    text-align: center;
-  }
+.panel-heading h1 {
+  text-align: center;
 } 
 
 .navbar {
